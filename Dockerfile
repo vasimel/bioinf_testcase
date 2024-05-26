@@ -1,4 +1,3 @@
-# Use official Ubuntu as base image
 FROM ubuntu:22.04
 
 
@@ -18,6 +17,8 @@ ENV LIBDEFLATE_VERSION=${LIBDEFLATE_VERSION}
 ENV SAMTOOLS_VERSION=${SAMTOOLS_VERSION}
 ENV BCFTOOLS_VERSION=${BCFTOOLS_VERSION}
 ENV VCFTOOLS_VERSION=${VCFTOOLS_VERSION}
+
+
 
 # Update the package list and install dependencies
 RUN apt-get update && apt-get install -y \
@@ -40,6 +41,8 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install argparse pysam
 
 # Create directories
 RUN mkdir -p $SOFT
@@ -110,6 +113,15 @@ ENV LD_LIBRARY_PATH="${HTSLIB_DIR}/lib:$LD_LIBRARY_PATH"
 # Clean up
 WORKDIR /
 RUN rm -rf /tmp/*
+
+
+# Copy the necessary files
+COPY ./twoAllel_to_refAlt.py $SOFT
+
+RUN mkdir -p /data
+
+COPY ./FP_SNPs_10k_GB38_twoAllelsFormat.tsv /data
+COPY ./FP_SNPs.txt /data
 
 # Default command
 CMD ["bash"]

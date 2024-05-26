@@ -1,0 +1,14 @@
+2024-05-26 15:57:40,791 - INFO - Starting conversion: input=FP_SNPs_10k_GB38_twoAllelsFormat.tsv, output=FP_SNPs_10k_GB38_refAltFormat.tsv, reference_dir=./ref
+2024-05-26 15:57:40,793 - WARNING - Reference file not found for chromosome: MT
+2024-05-26 15:57:40,793 - INFO - Processing file...
+2024-05-26 15:57:40,821 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr1:145899155
+2024-05-26 15:57:40,891 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr10:47420743
+2024-05-26 15:57:40,892 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr10:47320207
+2024-05-26 15:57:40,892 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr10:47268342
+2024-05-26 15:57:40,892 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr10:47099482
+2024-05-26 15:57:40,892 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr10:46031829
+2024-05-26 15:57:40,898 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr11:54678670
+2024-05-26 15:57:40,920 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr15:22907410
+2024-05-26 15:57:40,920 - WARNING - Skipping line due to error: None of the alleles match the reference base at chr15:22832212
+2024-05-26 15:57:40,952 - INFO - File processing completed.
+2024-05-26 15:57:40,953 - INFO - Conversion finished.
