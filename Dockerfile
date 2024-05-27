@@ -1,11 +1,16 @@
 FROM ubuntu:22.04
 
 
-# set packages version
+# set packages version:
+# HTSLIB 1.20 (16/04/2024)
 ARG HTSLIB_VERSION=1.20
+# LIBDEFLATE 1.20 (23/03/2024)
 ARG LIBDEFLATE_VERSION=v1.20
+# SAMTOOLS 1.20 (16/04/2024)
 ARG SAMTOOLS_VERSION=1.20
+# SAMTOOLS 1.20 (16/04/2024)
 ARG BCFTOOLS_VERSION=1.20
+# VCFTOOLS v0.1.16 (03/08/2018)
 ARG VCFTOOLS_VERSION=v0.1.16
 
 
@@ -58,7 +63,6 @@ RUN git clone https://github.com/samtools/htslib.git \
     && make \
     && make install
 
-# Export HTSlib path
 ENV HTSLIB_DIR=$SOFT/htslib-$HTSLIB_VERSION/
 
 
